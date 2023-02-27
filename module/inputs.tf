@@ -18,19 +18,6 @@ variable "root_domain" {
   EOT
 }
 
-variable "domains" {
-  description = "A list of domains that should be SANs in the issued certificate"
-  type        = map(any)
-  default = {
-    "yakhyadabo.org" = {
-      sub_domain_names = ["dev", "test", "stage"]
-    },
-    "yakhyadabo.com" = {
-      sub_domain_names = ["vault", "kafka", "lambda"]
-    }
-  }
-}
-
 variable "validation_method" {
   description = <<EOT
   Validation Method
