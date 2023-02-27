@@ -31,16 +31,6 @@ variable "domains" {
   }
 }
 
-variable "domain_name" {
-  description = "A list of domains that should be SANs in the issued certificate"
-  type        = map(any)
-  default = {
-    "jazzfest.link" = {
-      domain_alternative_names = ["neo.jazzfest.link", "trinity.jazzfest.link", "morpheus.jazzfest.link"]
-    }
-  }
-}
-
 variable "validation_method" {
   description = <<EOT
   Validation Method
